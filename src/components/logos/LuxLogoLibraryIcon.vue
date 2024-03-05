@@ -61,9 +61,9 @@ export default {
 </style>
 
 <docs>
-    ```jsx
+  ```jsx
     <div>
       <lux-logo-library-icon></lux-logo-library-icon>
     </div>
-    ```
-  </docs>
+  ```
+</docs>
