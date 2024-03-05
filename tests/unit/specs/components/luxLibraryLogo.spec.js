@@ -24,5 +24,9 @@ describe("LuxLibraryLogo.vue", () => {
     expect(wrapper.get("marquee").exists()).toBe(true)
     expect(wrapper.find("div").exists()).toBe(false)
   })
-  it("can display in dark themes", () => {})
+  it("can display in dark themes", async () => {
+    wrapper.setProps({ theme: "dark" })
+    await nextTick()
+    expect(wrapper.find("path[style = 'fill: #fff']").exists()).toBe(true)
+  })
 })
