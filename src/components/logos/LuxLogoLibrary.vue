@@ -77,10 +77,10 @@ export default {
 </style>
 
 <docs>
-    ```jsx
+  ```jsx
     <div>
       <lux-logo-library></lux-logo-library>
       <lux-logo-library color="#000"></lux-logo-library>
     </div>
-    ```
-  </docs>
+  ```
+</docs>
