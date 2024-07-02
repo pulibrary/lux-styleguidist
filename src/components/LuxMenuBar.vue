@@ -420,11 +420,6 @@ export default {
       font-size: var(--font-size-base);
     }
 
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-
     &[target="_blank"]:after {
       content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
       margin: 0px 3px 0px 5px;
@@ -473,6 +468,14 @@ export default {
       &.lux-has-children {
         @media #{$media-query-medium-max} {
           border-bottom: 0;
+        }
+      }
+
+      .lux-show a {
+        &:hover,
+        &:focus-visible {
+          outline-offset: 0;
+          outline: 0.25rem var(--color-princeton-orange-on-white) solid;
         }
       }
     }
@@ -587,6 +590,14 @@ export default {
 
 .dark {
   background: var(--color-rich-black);
+  a,
+  .lux-submenu-toggle {
+    &:hover,
+    &:focus-visible {
+      outline-offset: 0;
+      outline: 0.25rem var(--color-princeton-orange-on-black) solid;
+    }
+  }
 
   @media (max-width: 899px) {
     &.lux-main-menu a {
@@ -618,6 +629,15 @@ export default {
 .shade {
   background: var(--color-grayscale-darker);
 
+  a,
+  .lux-submenu-toggle {
+    &:hover,
+    &:focus-visible {
+      outline-offset: 0;
+      outline: 0.25rem var(--color-princeton-orange-on-black) solid;
+    }
+  }
+
   @media (max-width: 899px) {
     &.lux-main-menu a {
       color: var(--color-rich-black);
@@ -647,6 +667,14 @@ export default {
 
 .light {
   background: var(--color-white);
+  a,
+  .lux-submenu-toggle {
+    &:hover,
+    &:focus-visible {
+      outline-offset: 0;
+      outline: 0.25rem var(--color-princeton-orange-on-white) solid;
+    }
+  }
 
   :deep(.hamburger-inner),
   :deep(.hamburger-inner:after),

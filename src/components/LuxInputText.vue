@@ -376,6 +376,10 @@ $color-placeholder: tint(rgb(149, 156, 167), 50%);
         -moz-osx-font-smoothing: grayscale;
         opacity: 1;
       }
+      &:hover,
+      &:focus {
+        outline: solid 0.25rem var(--color-princeton-orange-on-white);
+      }
     }
 
     textarea {
